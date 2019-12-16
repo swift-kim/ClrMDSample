@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using Microsoft.Diagnostics.Runtime;
 
 static class Program
@@ -9,11 +8,10 @@ static class Program
         using DataTarget dataTarget = DataTarget.LoadCoreDump(args[0]);
         //using DataTarget dataTarget = DataTarget.PassiveAttachToProcess(int.Parse(args[0]));
 
-        ClrInfo runtimeInfo = dataTarget.ClrVersions[0];
-        ClrRuntime runtime = runtimeInfo.CreateRuntime();
+        using ClrRuntime runtime = dataTarget.ClrVersions[0].CreateRuntime();
 
-        Console.WriteLine("AppDomains:      {0:n0}", runtime.AppDomains.Count);
-        Console.WriteLine("Managed Threads: {0:n0}", runtime.Threads.Count);
+        Console.WriteLine("AppDomains:      {0:n0}", runtime.AppDomains.Length);
+        Console.WriteLine("Managed Threads: {0:n0}", runtime.Threads.Length);
 
         foreach (ClrAppDomain domain in runtime.AppDomains)
         {
