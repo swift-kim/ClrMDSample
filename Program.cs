@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.Diagnostics.Runtime;
 
 static class Program
 {
     static void Main(string[] args)
     {
-        using DataTarget dataTarget = DataTarget.LoadCoreDump(args[0]);
-        //using DataTarget dataTarget = DataTarget.PassiveAttachToProcess(int.Parse(args[0]));
+        using DataTarget dataTarget =
+            int.TryParse(args[0], out int pid) ?
+            DataTarget.PassiveAttachToProcess(pid) :
+            DataTarget.LoadCoreDump(args[0]);
 
-        using ClrRuntime runtime = dataTarget.ClrVersions[0].CreateRuntime();
+        using ClrRuntime runtime = dataTarget.ClrVersions.Single().CreateRuntime();
 
         Console.WriteLine("AppDomains:      {0:n0}", runtime.AppDomains.Length);
         Console.WriteLine("Managed Threads: {0:n0}", runtime.Threads.Length);
