@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClrMDSample", "ClrMDSample.csproj", "{4D1D79F0-D0CF-4E76-ADBF-0ACB0805FFFF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Diagnostics.Runtime", "..\..\public\clrmd2.0\src\Microsoft.Diagnostics.Runtime\Microsoft.Diagnostics.Runtime.csproj", "{8C862867-DB45-4888-85DE-7F3329CB2649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Diagnostics.Runtime", "..\..\public\clrmd2.0\src\Microsoft.Diagnostics.Runtime\Microsoft.Diagnostics.Runtime.csproj", "{B6AFA1FB-C69C-400E-95D5-CB02B55BCF1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{4D1D79F0-D0CF-4E76-ADBF-0ACB0805FFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D1D79F0-D0CF-4E76-ADBF-0ACB0805FFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D1D79F0-D0CF-4E76-ADBF-0ACB0805FFFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C862867-DB45-4888-85DE-7F3329CB2649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C862867-DB45-4888-85DE-7F3329CB2649}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C862867-DB45-4888-85DE-7F3329CB2649}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C862867-DB45-4888-85DE-7F3329CB2649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AFA1FB-C69C-400E-95D5-CB02B55BCF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AFA1FB-C69C-400E-95D5-CB02B55BCF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AFA1FB-C69C-400E-95D5-CB02B55BCF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AFA1FB-C69C-400E-95D5-CB02B55BCF1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
